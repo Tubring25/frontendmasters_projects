@@ -17,6 +17,9 @@ dependencies:
   react:
     specifier: ^18
     version: 18.0.0
+  react-autosave:
+    specifier: ^0.4.3
+    version: 0.4.3(react-dom@18.0.0)(react@18.0.0)
   react-dom:
     specifier: ^18
     version: 18.0.0(react@18.0.0)
@@ -2550,6 +2553,16 @@ packages:
     resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
     engines: {node: '>=10'}
     dev: true
+
+  /react-autosave@0.4.3(react-dom@18.0.0)(react@18.0.0):
+    resolution: {integrity: sha512-uiQAsQYZKfaG9uDQnZMtvM2rIohy0KbhxYYxpFqQiB7RpcsPUDG03QNwmMMcr0TbvSW3rPyHjZdWEUcUeEpRbQ==}
+    peerDependencies:
+      react: ^17.x.x || ^18.x.x
+      react-dom: ^17.x.x || ^18.x.x
+    dependencies:
+      react: 18.0.0
+      react-dom: 18.0.0(react@18.0.0)
+    dev: false
 
   /react-dom@18.0.0(react@18.0.0):
     resolution: {integrity: sha512-XqX7uzmFo0pUceWFCt7Gff6IyIMzFUn7QMZrbrQfGxtaxXZIcGQzoNpRLE3fQLnS4XzLLPMZX2T9TRcSrasicw==}
