@@ -1,3 +1,4 @@
+import { analyze } from "@/utils/ai"
 import { getUserByClerkId } from "@/utils/auth"
 import { prisma } from "@/utils/db"
 import { revalidatePath } from "next/cache"
@@ -8,7 +9,15 @@ export const POST = async () => {
   const entry = await prisma.journalEntry.create({
     data: {
       userId: user.id,
-      content: "Hello World"
+      content: "This is a good day. I am happy."
+    }
+  })
+
+  const analysis = await analyze(entry.content)
+  await prisma.analysis.create({
+    data: {
+      entryId: entry.id,
+      ...analysis,
     }
   })
 

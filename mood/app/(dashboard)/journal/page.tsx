@@ -13,8 +13,12 @@ const getEntries = async () => {
     },
     orderBy: {
       createAt: 'desc'
+    },
+    include: {
+      analysis: true
     }
   })
+
   return entries
 }
 const JournalPage = async () => {
