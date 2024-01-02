@@ -9,6 +9,7 @@ import { MemoryVectorStore } from "langchain/vectorstores/memory";
 
 const parser = StructuredOutputParser.fromZodSchema(
   z.object({
+    sentimentScore: z.number().describe('The sentiment score of the journal entry'),
     mood: z.string().describe('The mood of the person who wrote the journal entry'),
     summary: z.string().describe('A summary of the journal entry'),
     subject: z.string().describe('The subject of the journal entry'),

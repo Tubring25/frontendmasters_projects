@@ -5,6 +5,7 @@ const DashboardLayout = ({ children }) => {
   const links = [
     { name: "Home", href: "/" },
     { name: "Journal", href: "/journal" },
+    { name: "History", href: "/history" },
   ]
   return (
     <div className="h-screen w-screen relative">
